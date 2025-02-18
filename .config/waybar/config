@@ -33,7 +33,7 @@
       "default": ""
     },
     "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
     "hyprland/window": {
         "format": "{}",
@@ -44,9 +44,9 @@
         "format": "{icon}",
        "format-icons": {
             "activated": "",
-            "deactivated": "",
+            "deactivated": ""
         },
-        "on-click":"exec ~/.config/hypr/scripts/idle_inhibitor.sh",
+        "on-click":"exec ~/.config/hypr/scripts/idle_inhibitor.sh"
     },
     "tray": {
         "icon-size": 20,
@@ -59,7 +59,7 @@
         "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
         //"max-length": 200
         "interval": 1,
-        "on-click": "~/.config/waybar/scripts/OCV",
+        "on-click": "~/.config/waybar/scripts/OCV"
     },
     "cpu": {
         "format": "🖳{usage}%",
@@ -119,7 +119,7 @@
        "format-icons": {
            "has-updates": "󱍷",
            "updated": "󰂪",
-        "interval": 7200,
+        "interval": 7200
        },
        "exec-if": "which waybar-module-pacman-updates",
        "exec": "waybar-module-pacman-updates",
@@ -128,21 +128,21 @@
     "custom/power": {
       	"format":"⏻",
        	"on-click": "nwgbar",
-      	"tooltip": false,
+      	"tooltip": false
    },
    "custom/keyboard-layout": {
       	"format": " Cheat", // Icon: keyboard
-        "on-click": "~/.local/bin/keyhint.sh",
+        "on-click": "~/.local/bin/keyhint.sh"
      },
     "custom/launcher": {
     "format":"    ",
     	"on-click": "exec nwg-drawer -c 7 -is 70 -spacing 23",
-    	"tooltip": false,
+    	"tooltip": false
      },
      "custom/network_traffic": {
              "exec": "~/.config/waybar/scripts/network_traffic.sh",
              "return-type": "json",
-             "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",    // optional
+             "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}"    // optional
 },
     "pulseaudio": {
         "scroll-step": 3, // %, can be a float
@@ -172,5 +172,5 @@
         "interval": 900,
 	    "on-click": "yad --html --uri='https://wttr.in/' --center --fixed --width=1000 --height=680 --timeout=60 --timeout-indicator=right"
         // Please don't change it to any special location, let the user do it by themselves
-        },
+        }
     }
