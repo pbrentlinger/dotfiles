@@ -1,0 +1,87 @@
+# Dotfiles repo specific
+.dotfiles/
+
+# Linux specific
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Hyprland/Wayland specific
+.cache/
+swaylock/
+*.log
+*.pid
+*.state
+*.sock
+
+# Common development files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+.env
+.envrc
+.direnv
+
+# Package managers and build artifacts
+node_modules/
+__pycache__/
+*.pyc
+.npm/
+.yarn/
+build/
+dist/
+
+# Browser data
+.mozilla/
+.chrome/
+.config/google-chrome/
+.config/chromium/
+.config/BraveSoftware/
+
+# Local history and temporary files
+.bash_history
+.zsh_history
+.python_history
+.lesshst
+.viminfo
+.wget-hsts
+tmp/
+.tmp/
+.temp/
+
+# Sensitive information
+.ssh/
+.gnupg/
+.aws/
+.kube/
+.config/**/secrets*
+**/credentials*
+**/*_history
+**/*.key
+**/*.pem
+
+# Large media and cache directories
+Downloads/
+Pictures/
+Videos/
+Music/
+.thumbnails/
+.local/share/Trash/
+
+# Package manager files
+.config/yarn/
+.cargo/
+.rustup/
+.npm/
+.nvm/
+.local/share/pnpm/
+
+# Editor backup files
+*.bak
+*.backup
+*~
+*.save
