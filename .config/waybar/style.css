@@ -1,14 +1,14 @@
 /* =============================================================================
- *
- * Waybar configuration
- *
- * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
- *
- * =========================================================================== */
+*
+* Waybar configuration
+*
+* Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+*
+* =========================================================================== */
 
 /* -----------------------------------------------------------------------------
- * Keyframes
- * -------------------------------------------------------------------------- */
+* Keyframes
+* -------------------------------------------------------------------------- */
 
 
 /*
@@ -35,8 +35,8 @@ nord15 #b48ead
 */
 
 /* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
+* Base styles
+* -------------------------------------------------------------------------- */
 
 /* Reset all styles */
 
@@ -50,7 +50,7 @@ nord15 #b48ead
     margin-right: 5px;
     margin-left: 5px;
     padding-bottom:2px;
-   }
+}
 
 window#waybar {
     background:rgba (0, 0, 0, 0.65);
@@ -89,12 +89,12 @@ window#waybar {
 }
 
 /* -----------------------------------------------------------------------------
- * Module styles
- * -------------------------------------------------------------------------- */
+* Module styles
+* -------------------------------------------------------------------------- */
 
 
 #clock {
- color:#a3be8c;
+    color:#a3be8c;
 }
 
 #backlight {
@@ -110,10 +110,10 @@ window#waybar {
 }
 
 @keyframes blink {
-    to {
-        color: #4c566a;
-        background-color: #eceff4;
-    }
+to {
+    color: #4c566a;
+    background-color: #eceff4;
+}
 }
 
 #battery.critical:not(.charging) {
@@ -150,7 +150,7 @@ window#waybar {
     color: #b48ead;
 }
 
-#pulseaudio.muted {
+#pulseaudio.muted, #pulseaudio.source-muted {
     color: #e20548;
 }
 
@@ -159,23 +159,27 @@ window#waybar {
 }
 
 #temperature.critical {
-    color: #bf616a;
-}
-
-#idle_inhibitor {
-   color: #ebcb8b;
+    background: #bf616a;
+    color: #eceff4;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #tray {
+    background: #4c566a;
+    color: #eceff4;
 }
 
 #custom-launcher{
-        font-size: 20px;
-        background-image: url('/home/patrick/.config/waybar/launcher.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        border-style: hidden;
+    font-size: 20px;
+    background-image: url('/home/patrick/.config/waybar/launcher.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-style: hidden;
 }
 
 #custom-power{
@@ -188,11 +192,12 @@ window#waybar {
     margin-top:1px;
 }
 #custom-keyboard-shortcuts{
-   color:#d08770;
+    color:#d08770;
 }
 #custom-network_traffic{
-   color:#d08770;
+    color:#a3be8c;
 }
 
+#idle_inhibitor { color: #ebcb8b; }
 #idle_inhibitor.deactivated { color: #a3be8c; }
 #idle_inhibitor.activated { color: #bf616a; }

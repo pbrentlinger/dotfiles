@@ -20,7 +20,8 @@ human_readable() {
   local ndigits=${#1}
   local idxunit=$(( (2 + ndigits) / 3 - 1))
   local lentrim=$(( ndigits - (idxunit * 3 ) ))
-  echo ${1::$lentrim}${hrunits[$idxunit]}
+  # Pad with zeros to ensure 4 digits
+  printf "%04d%s" "${1::$lentrim}" "${hrunits[$idxunit]}"
 }
 
 exit_err() {
@@ -107,4 +108,3 @@ done
 #             "return-type": "json",
 #             "format": "Speed: {}",    // optional
 #         },
-

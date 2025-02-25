@@ -8,8 +8,8 @@
         // Choose the order of the modules
 
         "modules-left": ["custom/launcher", "hyprland/workspaces"],
-        "modules-center": ["hyprland/window", "hyprland/submap"],
-        "modules-right": ["pulseaudio", "custom/updates", "custom/keyboard-shortcuts",  "temperature",  "cpu", "memory", "battery", "network", "custom/network_traffic", "tray", "idle_inhibitor", "clock","custom/power"],
+        "modules-center": ["hyprland/window", "hyprland/submap", "network", "custom/network_traffic"],
+        "modules-right": ["pulseaudio", "custom/updates", "custom/keyboard-shortcuts",  "temperature",  "cpu", "memory", "battery", "idle_inhibitor", "clock", "tray", "custom/power"],
 
         // Modules configuration
 
