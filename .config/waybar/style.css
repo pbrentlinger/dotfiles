@@ -66,12 +66,16 @@ window#waybar {
     margin-top:2px;
 }
 
-#workspaces button.active {
-    border-color: #5e81ac;
-}
-
 #workspaces button.visible {
     border-color: #81a1c1;
+}
+
+/* #workspaces button.special button.active { */
+/*     border-color: #b48ead; */
+/* } */
+
+#workspaces button.active {
+    border-color: #5e81ac;
 }
 
 #workspaces button.urgent {
@@ -189,3 +193,6 @@ window#waybar {
 #custom-network_traffic{
    color:#d08770;
 }
+
+#idle_inhibitor.deactivated { color: #a3be8c; }
+#idle_inhibitor.activated { color: #bf616a; }
