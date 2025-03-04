@@ -10,6 +10,22 @@
 * Keyframes
 * -------------------------------------------------------------------------- */
 
+/*
+Background Colors:
+Deep Black: #060606 (near black)
+Dark Gray: #443D3B (warm dark gray)
+Mid Gray: #5B5A59 (neutral gray)
+
+Accent Colors:
+Warm Gray: #857772 (warm mid-tone)
+Sepia: #968977 (warm light brown)
+
+Text/Foreground Colors:
+Light Gray: #A09F9E (neutral light gray)
+Warm White: #CDC2B4 (warm off-white)
+Pure White: #EAE9E7 (near white)
+*/
+
 
 /*
 Polar Night
@@ -42,28 +58,23 @@ nord15 #b48ead
 
 * {
     color: #CDC2B4;
-    border: 0;
-    border-radius: 0;
-    padding: 0 0;
-    font-family:Symbols Nerd Font Mono;
+    font-family: Symbols Nerd Font Mono;
     font-size: 15px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding-bottom:2px;
+    transition: all 0.3s ease;
 }
 
 window#waybar {
-    background: rgba(6, 6, 6, 0.85);
-    border-radius: 20px 20px 20px 20px;
+    background: transparent;
 }
 
 #workspaces button {
-    padding: 2px 0px;
-    border-bottom: 2px;
+    padding: 2px 8px;
+    margin: 4px;
     color: #A09F9E;
-    border-color: #5B5A59;
-    border-style: solid;
-    margin-top:2px;
+    background: rgba(6, 6, 6, 0.75);
+    border: 2px solid #5B5A59;
+    border-radius: 50px;
+    min-width: 30px;
 }
 
 #workspaces button.visible {
@@ -82,10 +93,28 @@ window#waybar {
     border-color: #443D3B;
 }
 
-#clock, #battery, #cpu, #memory,#idle_inhibitor, #temperature,#custom-keyboard-shortcuts, #backlight, #network, #pulseaudio, #tray, #window,#custom-launcher,#custom-power,#custom-updates ,#custom-network_traffic,#custom-weather{
-    padding: 0 3px;
-    border-bottom: 2px;
-    border-style: solid;
+#clock, #battery, #cpu, #memory, #idle_inhibitor, #temperature,
+#custom-keyboard-shortcuts, #backlight, #network, #pulseaudio,
+#window, #custom-launcher, #custom-power, #custom-updates,
+#custom-network_traffic, #custom-weather {
+    background: rgba(6, 6, 6, 0.75);
+    padding: 2px 8px;
+    margin: 4px;
+    border: 2px solid #443D3B;
+    border-radius: 50px;
+}
+
+#tray menu {
+    background: rgba(6, 6, 6, 0.95);
+    border: 2px solid #443D3B;
+}
+
+#tray {
+    background: rgba(6, 6, 6, 0.75);
+    padding: 2px 8px;
+    margin: 4px;
+    border: 2px solid #443D3B;
+    border-radius: 50px;
 }
 
 /* -----------------------------------------------------------------------------
