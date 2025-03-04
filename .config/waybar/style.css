@@ -41,7 +41,7 @@ nord15 #b48ead
 /* Reset all styles */
 
 * {
-    color: #eceff4;
+    color: #CDC2B4;
     border: 0;
     border-radius: 0;
     padding: 0 0;
@@ -53,21 +53,21 @@ nord15 #b48ead
 }
 
 window#waybar {
-    background:rgba (0, 0, 0, 0.65);
+    background: rgba(6, 6, 6, 0.85);
     border-radius: 20px 20px 20px 20px;
 }
 
 #workspaces button {
     padding: 2px 0px;
     border-bottom: 2px;
-    color: #eceff4;
-    border-color: #d8dee9;
+    color: #A09F9E;
+    border-color: #5B5A59;
     border-style: solid;
     margin-top:2px;
 }
 
 #workspaces button.visible {
-    border-color: #81a1c1;
+    border-color: #857772;
 }
 
 /* #workspaces button.special button.active { */
@@ -75,11 +75,11 @@ window#waybar {
 /* } */
 
 #workspaces button.active {
-    border-color: #5e81ac;
+    border-color: #968977;
 }
 
 #workspaces button.urgent {
-    border-color: #bf616a;
+    border-color: #443D3B;
 }
 
 #clock, #battery, #cpu, #memory,#idle_inhibitor, #temperature,#custom-keyboard-shortcuts, #backlight, #network, #pulseaudio, #tray, #window,#custom-launcher,#custom-power,#custom-updates ,#custom-network_traffic,#custom-weather{
