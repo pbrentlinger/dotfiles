@@ -1,0 +1,8 @@
+[default]
+path = "/home/patrick/.config/hypr/static"
+
+[DP-1]
+path = "/home/patrick/.config/hypr/static/mind_of_christ_ultrawide.jpg"
+
+[HDMI-A-1]
+path = "/home/patrick/.config/hypr/static/mind_of_christ_1080p.jpg"
