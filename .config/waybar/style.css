@@ -10,6 +10,24 @@
 * Keyframes
 * -------------------------------------------------------------------------- */
 
+@keyframes urgent-pulse {
+    0% {
+        box-shadow: 0 0 1px #857772 inset;
+        border-color: #857772;
+        background: rgba(6, 6, 6, 0.75);
+    }
+    50% {
+        box-shadow: 0 0 2px #857772 inset;
+        border-color: #CDC2B4;
+        background: rgba(68, 61, 59, 0.9);
+    }
+    100% {
+        box-shadow: 0 0 1px #857772 inset;
+        border-color: #857772;
+        background: rgba(6, 6, 6, 0.75);
+    }
+}
+
 /*
 Background Colors:
 Deep Black: #060606 (near black)
@@ -90,7 +108,8 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-    border-color: #443D3B;
+    border-color: #857772;
+    animation: urgent-pulse 1.5s infinite ease-in-out;
 }
 
 #clock, #battery, #cpu, #memory, #idle_inhibitor, #temperature,
