@@ -65,11 +65,27 @@
             "on-click": "~/.config/waybar/scripts/OCV"
         },
         "cpu": {
-            "format": "🖳{usage}%",
+            "format": "🖳 {usage}%",
+            "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+            "interval": 1,
+            "states": {
+                "low": 0,
+                "medium": 30,
+                "high": 70,
+                "critical": 80
+            },
             "on-click": "foot -e htop"
         },
         "memory": {
-            "format": "🖴 {: >3}%",
+            "format": "🖴 {percentage}%",
+            "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+            "interval": 1,
+            "states": {
+                "low": 0,
+                "medium": 30,
+                "high": 70,
+                "critical": 80
+            },
             "on-click": "foot -e htop"
         },
         "temperature": {

@@ -258,6 +258,52 @@ to {
 #idle_inhibitor.deactivated { 
     color: #A09F9E; 
 }
+
+/* CPU states */
+#cpu.low {
+    color: #CDC2B4;
+    background: rgba(6, 6, 6, 0.75);
+}
+
+#cpu.medium {
+    color: #968977;
+    background: rgba(84, 76, 74, 0.2);
+}
+
+#cpu.high {
+    color: #d08770;
+    background: rgba(208, 135, 112, 0.2);
+    animation: urgent-pulse 5s infinite;
+}
+
+#cpu.critical {
+    color: #bf616a;
+    background: rgba(191, 97, 106, 0.2);
+    animation: urgent-pulse 1s infinite;
+}
+
+/* Memory states */
+#memory.low {
+    color: #CDC2B4;
+    background: rgba(6, 6, 6, 0.75);
+}
+
+#memory.medium {
+    color: #968977;
+    background: rgba(84, 76, 74, 0.2);
+}
+
+#memory.high {
+    color: #d08770;
+    background: rgba(208, 135, 112, 0.2);
+    animation: urgent-pulse 5s infinite;
+}
+
+#memory.critical {
+    color: #bf616a;
+    background: rgba(191, 97, 106, 0.2);
+    animation: urgent-pulse 1s infinite;
+}
 #idle_inhibitor.activated { 
     color: #EAE9E7; 
     box-shadow: 0 0 8px #857772 inset;
