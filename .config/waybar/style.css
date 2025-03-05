@@ -99,14 +99,18 @@ window#waybar {
     border-color: #CDC2B4;
 }
 
-/* #workspaces button.special button.active { */
-/*     border-color: #b48ead; */
-/* } */
 
 #workspaces button.active {
     border-color: #FFFFFF;
     box-shadow: 0 0 8px #857772 inset;
 }
+
+/* TODO: watch for fix to special workspaces to add active/visible styles */
+/* #workspaces button.special {
+    border-color: #968977;
+    box-shadow: 0 0 4px #857772 inset;
+    background: rgba(84, 76, 74, 0.9);
+} */
 
 #workspaces button.urgent {
     border-color: #857772;
