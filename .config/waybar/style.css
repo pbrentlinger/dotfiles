@@ -179,14 +179,6 @@ to {
     animation-direction: alternate;
 }
 
-#cpu {
-    /* color:#a3be8c ; */
-}
-
-#memory {
-    /* color: #d3869b; */
-}
-
 #network.disabled {
     color:#bf616a;
 }
