@@ -120,7 +120,7 @@ window#waybar {
 #clock, #battery, #cpu, #memory, #idle_inhibitor, #temperature,
 #custom-keyboard-shortcuts, #backlight, #network, #pulseaudio,
 #window, #custom-launcher, #custom-power, #custom-updates,
-#custom-network_traffic, #custom-weather {
+#custom-network_traffic, #custom-weather, #mpris {
     background: rgba(6, 6, 6, 0.75);
     padding: 2px 8px;
     margin: 4px;
@@ -249,6 +249,23 @@ to {
 }
 #idle_inhibitor.deactivated { 
     color: #A09F9E; 
+}
+
+#mpris {
+    min-width: 100px;
+}
+
+#mpris.playing {
+    border-color: #CDC2B4;
+    box-shadow: 0 0 4px #857772 inset;
+}
+
+#mpris.paused {
+    color: #A09F9E;
+}
+
+#mpris.stopped {
+    color: #443D3B;
 }
 
 /* CPU states */
