@@ -120,7 +120,7 @@ window#waybar {
 #clock, #battery, #cpu, #memory, #idle_inhibitor, #temperature,
 #custom-keyboard-shortcuts, #backlight, #network, #pulseaudio,
 #window, #custom-launcher, #custom-power, #custom-updates,
-#custom-network_traffic, #custom-weather, #mpris {
+#custom-network_traffic, #custom-weather, #mpris, #keyboard-state {
     background: rgba(6, 6, 6, 0.75);
     padding: 2px 8px;
     margin: 4px;
@@ -317,3 +317,8 @@ to {
     color: #EAE9E7; 
     box-shadow: 0 0 8px #857772 inset;
 }
+
+#keyboard-state numlock.locked, 
+#keyboard-state scrolllock.locked, 
+#keyboard-state capslock.locked {
+} 

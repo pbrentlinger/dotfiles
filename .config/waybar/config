@@ -8,7 +8,7 @@
     // Choose the order of the modules
 
     "modules-left": ["custom/launcher", "hyprland/workspaces"],
-    "modules-center": ["hyprland/window", "hyprland/submap", "network", "custom/network_traffic"],
+    "modules-center": ["hyprland/window", "hyprland/submap", "network", "custom/network_traffic", "keyboard-state"],
     "modules-right": ["pulseaudio", "mpris", "custom/updates", "custom/keyboard-shortcuts", "group/hardware", "idle_inhibitor", "clock", "tray", "custom/power"],
 
     // Modules configuration
@@ -56,6 +56,20 @@
         "format": "{}",
         "icon":true,
         "icon-size" : 20
+    },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "scrolllock": false,
+        "format": {
+            "numlock": "Num {icon}",
+            "capslock": "Caps {icon} | ",
+            "scrolllock": "Scroll {icon} | "
+        },
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
     },
     "idle_inhibitor": {
         "format": "{icon}",
