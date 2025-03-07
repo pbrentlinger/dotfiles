@@ -8,26 +8,19 @@
     // Choose the order of the modules
 
     "modules-left": ["custom/launcher", "hyprland/workspaces"],
-    "modules-center": ["hyprland/window", "hyprland/submap", "network", "custom/network_traffic", "keyboard-state"],
+    "modules-center": ["hyprland/window", "hyprland/submap", "network", "custom/network_traffic", "custom/weather"],
     "modules-right": ["pulseaudio", "mpris", "custom/updates", "custom/keyboard-shortcuts", "group/hardware", "idle_inhibitor", "clock", "tray", "custom/power"],
 
     // Modules configuration
 
-    "group/hardware": {
-        "drawer": {
-            "children-class": "hardware",
-            "click-to-reveal": false,
-            "transition-left-to-right": false
-        },
-        "orientation": "inherit",
-        "modules": [
-            "temperature",
-            "cpu",
-            "memory",
-            "battery"
-        ]
+    // =====================================================================
+    // ====== Left modules ===============================================
+    // =====================================================================
+    "custom/launcher": {
+        "format":"    ",
+        "on-click": "exec nwg-drawer -c 7 -is 70 -spacing 23",
+        "tooltip": false
     },
-
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
@@ -52,99 +45,19 @@
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
+    
+    // =====================================================================
+    // ====== Middle modules ===============================================
+    // =====================================================================
     "hyprland/window": {
         "format": "{}",
         "icon":true,
         "icon-size" : 20
     },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "scrolllock": false,
-        "format": {
-            "numlock": "Num {icon}",
-            "capslock": "Caps {icon} | ",
-            "scrolllock": "Scroll {icon} | "
-        },
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "start-activated": true,
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
-        "on-click":"exec ~/.config/hypr/scripts/idle_inhibitor.sh"
-    },
-    "tray": {
-        "icon-size": 20,
-        "spacing": 5
-    },
-    "clock": {
-        "tooltip-format": "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>",
-        "format": " {:%a %d %b  %I:%M %p}",	//12 hour format
-        //"format": " {:%a %d %b  %H:%M}",	//24 hour format
-        "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
-        //"max-length": 200
-        "interval": 1,
-        "on-click": "~/.config/waybar/scripts/OCV"
-    },
-    "cpu": {
-        "format": "🖳 {icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7} {icon8} {icon9} {icon10} {icon11} {icon12} {icon13} {icon14} {icon15} {usage}%",
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-        "interval": 1,
-        "states": {
-            "low": 0,
-            "medium": 30,
-            "high": 70,
-            "critical": 80
-        },
-        "on-click": "foot -e htop"
-    },
-    "memory": {
-        "format": "🖴 {percentage}%",
-        "interval": 1,
-        "states": {
-            "low": 0,
-            "medium": 30,
-            "high": 70,
-            "critical": 80
-        },
-        "on-click": "foot -e htop"
-    },
-    "temperature": {
-        "thermal-zone": 7,  // Check with: # cat /sys/class/hwmon/hwmon*/temp1_input
-        "hwmon-path": "/sys/class/hwmon/hwmon7/temp1_input",
-        "critical-threshold": 80,
-        "format-critical": "{temperatureC}°C ",
-        "format": "{temperatureC}°C ",
-        "on-click": "foot -e htop"
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{icon} {percent: >3}%",
-        "format-icons": ["", ""],
-        "on-scroll-down": "brightnessctl -c backlight set 1%-",
-        "on-scroll-up": "brightnessctl -c backlight set +1%",
-        "on-click": "~/.config/waybar/scripts/backlight-hint.sh"
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon} {capacity: >3}%",
-        "format-icons": ["", "", "", "", ""]
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        //"format-icons": ["", "", "", "", "", "", "", "", "", ""]
-        //"format": "&#x202b;{icon}&#x202c; {capacity}%",
-        //"format-icons": ["ﱉ","ﱊ","ﱌ","ﱍ","ﱋ"]
+    "hyprland/submap": {
+        "format": "󰙖 {}",
+        "max-length": 8,
+        "tooltip": false
     },
     "network": {
         //"interface": "wlp0s20f3", // (Optional) To force the use of this interface  "format-wifi": "  {essid}",
@@ -161,37 +74,22 @@
         //"max-length": 2,
         "on-click": "nm-connection-editor"
     },
-    "custom/updates": {
-        "format": "{} {icon}",
-        "return-type": "json",
-        "format-icons": {
-            "has-updates": "󱍷",
-            "updated": "󰂪",
-            "interval": 7200
-        },
-        "exec-if": "which waybar-module-pacman-updates",
-        "exec": "waybar-module-pacman-updates",
-        "on-click": "foot -e update"
-    },
-    "custom/power": {
-        "format":"⏻",
-        "on-click": "nwgbar",
-        "tooltip": false
-    },
-    "custom/keyboard-shortcuts": {
-        "format": " Cheat", // Icon: keyboard
-        "on-click": "~/.config/waybar/scripts/cheatsheet.sh"
-    },
-    "custom/launcher": {
-        "format":"    ",
-        "on-click": "exec nwg-drawer -c 7 -is 70 -spacing 23",
-        "tooltip": false
-    },
     "custom/network_traffic": {
         "exec": "~/.config/waybar/scripts/network_traffic.sh",
         "return-type": "json",
         "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}"    // optional
     },
+    // https://github.com/chubin/wttr.in
+    "custom/weather": {
+        "exec": "curl 'https://wttr.in/?format=2'",
+        "interval": 900,
+        "on-click": "yad --html --uri='https://wttr.in/' --center --fixed --width=1200 --height=780 --timeout=60 --timeout-indicator=right"
+        // Please don't change it to any special location, let the user do it by themselves
+    },
+
+    // =====================================================================
+    // ====== Right modules ===============================================
+    // =====================================================================
     "pulseaudio": {
         "scroll-step": 3, // %, can be a float
         "format": "{icon} {volume}% {format_source}",
@@ -238,17 +136,96 @@
         "dynamic-len": 40,
         "dynamic-separator": " | ",
     },
-    // https://github.com/chubin/wttr.in
-    "custom/weather": {
-        "exec": "curl 'https://wttr.in/?format=1'",
-        "interval": 900,
-        "on-click": "yad --html --uri='https://wttr.in/' --center --fixed --width=1000 --height=680 --timeout=60 --timeout-indicator=right"
-        // Please don't change it to any special location, let the user do it by themselves
+    "custom/updates": {
+        "format": "{} {icon}",
+        "return-type": "json",
+        "format-icons": {
+            "has-updates": "󱍷",
+            "updated": "󰂪",
+            "interval": 7200
+        },
+        "exec-if": "which waybar-module-pacman-updates",
+        "exec": "waybar-module-pacman-updates",
+        "on-click": "foot -e update"
     },
-    "hyprland/submap": {
-        "format": "✌️ {}",
-        "max-length": 8,
+    "custom/keyboard-shortcuts": {
+        "format": " Cheat", // Icon: keyboard
+        "on-click": "~/.config/waybar/scripts/cheatsheet.sh"
+    },
+    "group/hardware": {
+        "drawer": {
+            "children-class": "hardware",
+            "click-to-reveal": false,
+            "transition-left-to-right": false
+        },
+        "orientation": "inherit",
+        "modules": [
+            "temperature",
+            "cpu",
+            "memory",
+            "upower",
+        ]
+    },
+    "temperature": {
+        "thermal-zone": 7,  // Check with: # cat /sys/class/hwmon/hwmon*/temp1_input
+        "hwmon-path": "/sys/class/hwmon/hwmon7/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C ",
+        "format": "{temperatureC}°C ",
+        "on-click": "foot -e htop"
+    },
+    "cpu": {
+        "format": "🖳 {icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7} {icon8} {icon9} {icon10} {icon11} {icon12} {icon13} {icon14} {icon15} {usage}%",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "interval": 1,
+        "states": {
+            "low": 0,
+            "medium": 30,
+            "high": 70,
+            "critical": 80
+        },
+        "on-click": "foot -e htop"
+    },
+    "memory": {
+        "format": "🖴 {percentage}%",
+        "interval": 1,
+        "states": {
+            "low": 0,
+            "medium": 30,
+            "high": 70,
+            "critical": 80
+        },
+        "on-click": "foot -e htop"
+    },
+    "upower": {
+        "on-click": "upower --dump | yad --text-info"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "start-activated": true,
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "on-click":"exec ~/.config/hypr/scripts/idle_inhibitor.sh"
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>",
+        "format": " {:%a %d %b  %I:%M %p}",	//12 hour format
+        "format-alt": " {:%a %d %b  %H:%M}",	//24 hour format
+        // "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
+        //"max-length": 200
+        "interval": 1,
+        "on-click-right": "~/.config/waybar/scripts/OCV"
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 5
+    },
+    "custom/power": {
+        "format":"⏻",
+        "on-click": "nwgbar",
         "tooltip": false
-    }
+    },
 }
 
