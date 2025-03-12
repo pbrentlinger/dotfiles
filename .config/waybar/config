@@ -149,8 +149,8 @@
         "on-click": "foot -e update"
     },
     "custom/keyboard-shortcuts": {
-        "format": " Cheat", // Icon: keyboard
-        "on-click": "~/.config/waybar/scripts/cheatsheet.sh"
+        "format": " ",
+        "on-click": "~/.config/waybar/scripts/cheatsheet.sh",
     },
     "group/hardware": {
         "drawer": {
@@ -228,4 +228,3 @@
         "tooltip": false
     },
 }
-

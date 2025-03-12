@@ -34,7 +34,20 @@ to {
     background-color: #eceff4;
 }
 }
+
+@keyframes shadowPulse {
+  0% {}
+ 100% {
+    box-shadow: 0 0 8px #581818 inset;
+  }
+  50% {
+    box-shadow: 0 0 15px 4px #581818 inset;
+  }
+}
+
+
 /*
+* Mind of Christ Theme Colors
 Background Colors:
 Deep Black: #060606 (near black)
 Dark Gray: #443D3B (warm dark gray)
@@ -48,6 +61,15 @@ Text/Foreground Colors:
 Light Gray: #A09F9E (neutral light gray)
 Warm White: #CDC2B4 (warm off-white)
 Pure White: #EAE9E7 (near white)
+
+Theme Highlight Colors:
+Red: #9a262f
+Maroon: #581818
+Yellow: #ffe08e
+Orange: #f9b58e
+Brown: #8f5226
+Purple: #874b7e
+
 */
 
 /*
@@ -111,9 +133,9 @@ window#waybar {
 
 /* TODO: watch for fix to special workspaces to add active/visible styles */
 /* #workspaces button.special {
-    border-color: #968977;
-    box-shadow: 0 0 4px #857772 inset;
-    background: rgba(84, 76, 74, 0.9);
+border-color: #968977;
+box-shadow: 0 0 4px #857772 inset;
+background: rgba(84, 76, 74, 0.9);
 } */
 
 #workspaces button.urgent {
@@ -212,12 +234,14 @@ window#waybar {
 }
 
 #temperature {
-    color: #8fbcbb;
+    /* color: #8fbcbb; */
+    box-shadow: 0 0 6px 2px #8fbcbb inset;
 }
 
 #temperature.critical {
     background: #bf616a;
     color: #eceff4;
+    box-shadow: 0 0 9px 3px #9a262f inset;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -281,7 +305,8 @@ window#waybar {
 
 #idle_inhibitor.activated { 
     color: #EAE9E7; 
-    box-shadow: 0 0 8px #857772 inset;
+    box-shadow: 0 0 8px #581818 inset;
+    animation: shadowPulse 10s ease-in-out infinite;
 }
 
 #clock {
