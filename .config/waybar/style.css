@@ -10,7 +10,7 @@
 * Keyframes
 * -------------------------------------------------------------------------- */
 
-@keyframes urgent-pulse {
+@keyframes gray-background-pulse{
 0% {
     box-shadow: 0 0 1px #857772 inset;
     border-color: #857772;
@@ -35,7 +35,7 @@ to {
 }
 }
 
-@keyframes shadowPulse {
+@keyframes red-shadowPulse {
   0% {}
  100% {
     box-shadow: 0 0 8px #581818 inset;
@@ -140,7 +140,7 @@ background: rgba(84, 76, 74, 0.9);
 
 #workspaces button.urgent {
     border-color: #857772;
-    animation: urgent-pulse 1.5s infinite ease-in-out;
+    animation: gray-background-pulse 1.5s infinite ease-in-out;
 }
 
 #clock, #battery, #cpu, #memory, #idle_inhibitor, #temperature,
@@ -181,7 +181,7 @@ background: rgba(84, 76, 74, 0.9);
 #submap.resize {
     color: #EAE9E7; 
     box-shadow: 0 0 8px #857772 inset;
-    animation: urgent-pulse 1s infinite;
+    animation: gray-background-pulse 1s infinite;
 }
 #network.disabled {
     color:#bf616a;
@@ -229,6 +229,11 @@ background: rgba(84, 76, 74, 0.9);
     color: #443D3B;
 }
 
+#custom-updates.has-updates{
+    box-shadow: 0 0 8px #581818 inset;
+    animation: red-shadowPulse 10s ease-in-out infinite;
+}
+
 #custom-keyboard-shortcuts{
     /* color:#d08770; */
 }
@@ -263,13 +268,13 @@ background: rgba(84, 76, 74, 0.9);
 #cpu.high {
     color: #d08770;
     background: rgba(208, 135, 112, 0.2);
-    animation: urgent-pulse 5s infinite;
+    animation: red-shadowPulse 5s infinite;
 }
 
 #cpu.critical {
     color: #bf616a;
     background: rgba(191, 97, 106, 0.2);
-    animation: urgent-pulse 1s infinite;
+    animation: red-shadowPulse 1s infinite;
 }
 
 /* Memory states */
@@ -286,13 +291,13 @@ background: rgba(84, 76, 74, 0.9);
 #memory.high {
     color: #d08770;
     background: rgba(208, 135, 112, 0.2);
-    animation: urgent-pulse 5s infinite;
+    animation: gray-background-pulse 5s infinite;
 }
 
 #memory.critical {
     color: #bf616a;
     background: rgba(191, 97, 106, 0.2);
-    animation: urgent-pulse 1s infinite;
+    animation: gray-background-pulse 1s infinite;
 }
 
 #idle_inhibitor {
@@ -306,7 +311,7 @@ background: rgba(84, 76, 74, 0.9);
 #idle_inhibitor.activated { 
     color: #EAE9E7; 
     box-shadow: 0 0 8px #581818 inset;
-    animation: shadowPulse 10s ease-in-out infinite;
+    animation: red-shadowPulse 10s ease-in-out infinite;
 }
 
 #clock {
