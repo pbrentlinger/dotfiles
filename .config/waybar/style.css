@@ -246,11 +246,12 @@ background: rgba(84, 76, 74, 0.9);
 }
 #submap.resize {
     color: #EAE9E7; 
-    box-shadow: 0 0 8px #857772 inset;
-    animation: gray-background-pulse 1s infinite;
+    border-color: #874b7e;
+    box-shadow: 0 0 8px #874b7e inset;
+    animation: purple-shadowPulse 1.5s infinite;
 }
 #network.disabled {
-    color:#bf616a;
+    color:#581818;
 }
 
 #network {
@@ -258,7 +259,9 @@ background: rgba(84, 76, 74, 0.9);
 }
 
 #network.disconnected {
-    color: #bf616a;
+    color: #9a262f;
+    box-shadow: 0 0 8px #9a262f inset;
+    animation: red-shadowPulse 1s infinite;
 }
 
 #custom-network_traffic{
