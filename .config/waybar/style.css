@@ -35,16 +35,82 @@ to {
 }
 }
 
+
+/* Red-shadowPulse: #9a262f */
 @keyframes red-shadowPulse {
-  0% {}
- 100% {
-    box-shadow: 0 0 8px #581818 inset;
-  }
-  50% {
-    box-shadow: 0 0 15px 4px #581818 inset;
-  }
+0% { }
+100% {
+    box-shadow: 0 0 8px #9a262f inset;
+}
+50% {
+    box-shadow: 0 0 8px 4px #9a262f inset;
+}
 }
 
+/* Maroon: #581818 */
+@keyframes maroon-shadowPulse {
+0% { }
+100% {
+    box-shadow: 0 0 8px #581818 inset;
+}
+50% {
+    box-shadow: 0 0 8px 4px #581818 inset;
+}
+}
+
+/* Yellow: #ffe08e */
+@keyframes yellow-shadowPulse {
+0% { }
+100% {
+    box-shadow: 0 0 8px #ffe08e inset;
+}
+50% {
+    box-shadow: 0 0 8px 4px #ffe08e inset;
+}
+}
+
+/* Orange: #f9b58e */
+@keyframes orange-shadowPulse {
+0% { }
+100% {
+    box-shadow: 0 0 8px #f9b58e inset;
+}
+50% {
+    box-shadow: 0 0 8px 4px #f9b58e inset;
+}
+}
+
+/* Brown: #8f5226 */
+@keyframes brown-shadowPulse {
+0% { }
+100% {
+    box-shadow: 0 0 8px #8f5226 inset;
+}
+50% {
+    box-shadow: 0 0 8px 4px #8f5226 inset;
+}
+}
+
+/* Purple: #874b7e */
+@keyframes purple-shadowPulse {
+0% { }
+100% {
+    box-shadow: 0 0 8px #874b7e inset;
+}
+50% {
+    box-shadow: 0 0 8px 4px #874b7e inset;
+}
+}
+
+@keyframes shadowPulse {
+0% { }
+100% {
+    box-shadow: 0 0 8px #EAE9E7 inset;
+}
+50% {
+    box-shadow: 0 0 8px 4px #CDC2B4 inset;
+}
+}
 
 /*
 * Mind of Christ Theme Colors
@@ -230,8 +296,8 @@ background: rgba(84, 76, 74, 0.9);
 }
 
 #custom-updates.has-updates{
-    box-shadow: 0 0 8px #581818 inset;
-    animation: red-shadowPulse 10s ease-in-out infinite;
+    box-shadow: 0 0 8px #ffe08e inset;
+    animation: yellow-shadowPulse 10s ease-in-out infinite;
 }
 
 #custom-keyboard-shortcuts{
@@ -247,11 +313,7 @@ background: rgba(84, 76, 74, 0.9);
     background: #bf616a;
     color: #eceff4;
     box-shadow: 0 0 9px 3px #9a262f inset;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation: red-shadowPulse 0.5s infinite;
 }
 
 /* CPU states */
@@ -268,7 +330,7 @@ background: rgba(84, 76, 74, 0.9);
 #cpu.high {
     color: #d08770;
     background: rgba(208, 135, 112, 0.2);
-    animation: red-shadowPulse 5s infinite;
+    animation: orange-shadowPulse 5s infinite;
 }
 
 #cpu.critical {
@@ -291,13 +353,13 @@ background: rgba(84, 76, 74, 0.9);
 #memory.high {
     color: #d08770;
     background: rgba(208, 135, 112, 0.2);
-    animation: gray-background-pulse 5s infinite;
+    animation: orange-background-pulse 5s infinite;
 }
 
 #memory.critical {
     color: #bf616a;
     background: rgba(191, 97, 106, 0.2);
-    animation: gray-background-pulse 1s infinite;
+    animation: red-background-pulse 1s infinite;
 }
 
 #idle_inhibitor {
@@ -309,9 +371,9 @@ background: rgba(84, 76, 74, 0.9);
 }
 
 #idle_inhibitor.activated { 
-    color: #EAE9E7; 
-    box-shadow: 0 0 8px #581818 inset;
-    animation: red-shadowPulse 10s ease-in-out infinite;
+    /* color: #EAE9E7;  */
+    box-shadow: 0 0 8px #f9b58e inset;
+    animation: orange-shadowPulse 10s ease-in-out infinite;
 }
 
 #clock {

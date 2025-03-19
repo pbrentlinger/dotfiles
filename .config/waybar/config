@@ -110,7 +110,7 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol",
-        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
     "mpris": {
         "format": "{player_icon} {dynamic}",
