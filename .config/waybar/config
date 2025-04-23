@@ -4,6 +4,7 @@
     "height": 40,
     "margin": "0 5 0 5",
     "spacing":0,
+    "mode": "dock", // to make popup windows appear on top instead of behind the waybar
 
     // Choose the order of the modules
 
