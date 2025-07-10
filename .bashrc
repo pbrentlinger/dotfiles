@@ -21,3 +21,4 @@ fi
 
 alias dotfiles='/usr/bin/git --git-dir=/home/patrick/.dotfiles/ --work-tree=/home/patrick'
 eval "$(zoxide init bash)"
+. "$HOME/.cargo/env"
