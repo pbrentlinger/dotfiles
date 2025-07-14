@@ -1,7 +1,7 @@
 😀 : happy grinning face
-😃 : grinning face with big eyes
-😄 : grinning face with smiling eyes
-😁 : beaming face with smiling eyes
+😃 : happy grinning face with big eyes
+😄 : happy grinning face with smiling eyes
+😁 : happy beaming face with smiling eyes
 😆 : grinning squinting face
 😅 : grinning face with sweat
 🤣 : rolling on the floor laughing
@@ -4233,7 +4233,7 @@
 🔋 : battery
 🪫 : low battery
 🔌 : electric plug
-💻 : laptop
+💻 : laptop computer
 🖥️ : desktop computer
 🖥 : desktop computer
 🖨️ : printer
