@@ -1,6 +1,0 @@
-[default]
-# path = "/usr/share/wallpapers/garuda-wallpapers/"
-path = "~/.config/hypr/static"
-# duration = "1h"
-fill-mode = "fit"
-background-color = "#000000"
