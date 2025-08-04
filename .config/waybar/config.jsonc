@@ -2,6 +2,24 @@
     { // https://www.nerdfonts.com/cheat-sheet
         "output": ["DP-1"],
         "layer": "top", // Waybar at top layer
+        "position": "left", // Waybar position (top|bottom|left|right)
+        // "height": 43,
+        "margin": "0 5 0 5",
+        "spacing":0,
+        // "mode": "dock", // to make popup windows appear on top instead of behind the waybar
+        "mode": "dock",
+        "start_hidden": false,
+        
+
+        // Choose the order of the modules
+
+        "modules-left": ["custom/launcher", "hyprland/workspaces"],
+       
+        "include": [ "~/.config/waybar/modules.jsonc"]
+    },
+    { // https://www.nerdfonts.com/cheat-sheet
+        "output": ["DP-1"],
+        "layer": "top", // Waybar at top layer
         "position": "top", // Waybar position (top|bottom|left|right)
         "height": 43,
         "margin": "0 5 0 5",
@@ -19,7 +37,23 @@
 
         "include": [ "~/.config/waybar/modules.jsonc"]
     },
-    {
+    { // Minimal bar
+        "output": ["HDMI-A-1"],
+        "layer": "top", // Waybar at top layer
+        "position": "top", // Waybar position (top|bottom|left|right)
+        "height": 40,
+        "margin": "0 5 0 5",
+        "spacing":0,
+        "mode": "dock", // to make popup windows appear on top instead of behind the waybar
+        "start_hidden": false,
+
+        // Choose the order of the modules
+
+        "modules-left": ["custom/launcher", "hyprland/workspaces"],
+
+        "include": [ "~/.config/waybar/modules.jsonc"]
+    },
+    { // Full bar
         "output": ["HDMI-A-1"],
         "layer": "top", // Waybar at top layer
         "position": "top", // Waybar position (top|bottom|left|right)
