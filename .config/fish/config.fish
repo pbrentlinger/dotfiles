@@ -154,6 +154,8 @@ alias vdir 'vdir --color=auto'
 alias wget 'wget -c '
 alias :q 'exit'
 alias quit 'exit'
+alias cls 'clear'
+
 
 # Get fastest mirrors
 alias mirror 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
