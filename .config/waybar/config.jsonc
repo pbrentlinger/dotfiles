@@ -6,7 +6,10 @@
         "height": 43,
         "margin": "0 5 0 5",
         "spacing":0,
-        "mode": "dock", // to make popup windows appear on top instead of behind the waybar
+        // "mode": "dock", // to make popup windows appear on top instead of behind the waybar
+        "mode": "dock",
+        "start_hidden": true,
+        
 
         // Choose the order of the modules
 
@@ -24,6 +27,7 @@
         "margin": "0 5 0 5",
         "spacing":0,
         "mode": "dock", // to make popup windows appear on top instead of behind the waybar
+        "start_hidden": true,
 
         // Choose the order of the modules
 
