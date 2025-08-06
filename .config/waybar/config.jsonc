@@ -1,5 +1,6 @@
 [
     { // https://www.nerdfonts.com/cheat-sheet
+        "name": "4kmin",
         "output": ["DP-1"],
         "layer": "top", // Waybar at top layer
         "position": "left", // Waybar position (top|bottom|left|right)
@@ -14,10 +15,12 @@
         // Choose the order of the modules
 
         "modules-left": ["custom/launcher", "hyprland/workspaces"],
+        "modules-right": ["custom/clock-vert"],
        
         "include": [ "~/.config/waybar/modules.jsonc"]
     },
     { // https://www.nerdfonts.com/cheat-sheet
+        "name": "4kmax",
         "output": ["DP-1"],
         "layer": "top", // Waybar at top layer
         "position": "top", // Waybar position (top|bottom|left|right)
@@ -38,6 +41,7 @@
         "include": [ "~/.config/waybar/modules.jsonc"]
     },
     { // Minimal bar
+        "name": "1080pmin",
         "output": ["HDMI-A-1"],
         "layer": "top", // Waybar at top layer
         "position": "top", // Waybar position (top|bottom|left|right)
@@ -54,6 +58,7 @@
         "include": [ "~/.config/waybar/modules.jsonc"]
     },
     { // Full bar
+        "name": "1080pmax",
         "output": ["HDMI-A-1"],
         "layer": "top", // Waybar at top layer
         "position": "top", // Waybar position (top|bottom|left|right)
