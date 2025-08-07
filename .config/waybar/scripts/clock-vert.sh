@@ -39,8 +39,8 @@ if [ "$num5" == "A" ]; then
 fi
 # Output, skipping num1 if it's 0
 if [ "$num1" == "0" ]; then
-    echo "{\"text\": \" $num2\n ..\n $num3\n $num4\n$num5\"}"
+    echo "{\"text\": \" $num2\n ··\n $num3\n $num4\n$num5\"}"
 else
     # using unicode char: 0x0705 for sideways colon
-    echo "{\"text\": \" $num1\n $num2\n ܅\n $num3\n $num4\n$num5\"}"
+    echo "{\"text\": \"$num1\n$num2\n܅\n$num3\n$num4\n$num5\"}"
 fi

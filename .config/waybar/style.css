@@ -395,8 +395,10 @@ background: rgba(84, 76, 74, 0.9);
 
 #custom-clock-vert {
     color: #443D3B;
+    font-family: "Space Mono Bold";
     font-size: 20px;
     padding: 15px 0px;
+    font-stretch: ultra-expanded;
 }
 
 #tray {
