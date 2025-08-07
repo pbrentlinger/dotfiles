@@ -401,6 +401,10 @@ background: rgba(84, 76, 74, 0.9);
     font-stretch: ultra-expanded;
 }
 
+#custom-clock-vert:hover {
+    color: #FFF;
+}
+
 #tray {
     background: rgba(6, 6, 6, 0.75);
     padding: 2px 10px;
