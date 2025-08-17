@@ -212,7 +212,7 @@ background: rgba(84, 76, 74, 0.9);
 #clock, #battery, #cpu, #memory, #idle_inhibitor, #temperature,
 #custom-keyboard-shortcuts, #backlight, #network, #pulseaudio,
 #window, #custom-launcher, #custom-power, #custom-updates,
-#custom-network_traffic, #custom-weather, #mpris, #keyboard-state, #upower, #submap  {
+#custom-network_traffic, #custom-weather, #mpris, #keyboard-state, #upower, #submap, #custom-clock-simple {
     background: rgba(6, 6, 6, 0.75);
     padding: 2px 8px;
     margin: 4px;
@@ -221,14 +221,13 @@ background: rgba(84, 76, 74, 0.9);
 }
 
 /* vertical capsules */
-#custom-clock-vert { 
+#custom-clock-vert {
     background: rgba(6, 6, 6, 0.75);
     padding: 8px 2px;
     margin: 4px;
     border: 2px solid #443D3B;
     border-radius: 50px;
 }
-
 
 /* -----------------------------------------------------------------------------
 * Module styles
@@ -393,6 +392,13 @@ background: rgba(84, 76, 74, 0.9);
     padding: 15px 0px; 
 }
 
+#custom-clock-simple {
+    color: #443D3B;
+    font-family: "Space Mono Bold";
+    font-size: 20px;
+    padding: 2px 8px;
+    font-stretch: ultra-expanded;
+}
 #custom-clock-vert {
     color: #443D3B;
     font-family: "Space Mono Bold";
@@ -401,7 +407,7 @@ background: rgba(84, 76, 74, 0.9);
     font-stretch: ultra-expanded;
 }
 
-#custom-clock-vert:hover {
+#custom-clock-vert:hover, #custom-clock-simple:hover {
     color: #FFF;
 }
 

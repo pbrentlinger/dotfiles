@@ -37,10 +37,22 @@ fi
 if [ "$num5" == "A" ]; then
     num5="Ⓐ"
 fi
-# Output, skipping num1 if it's 0
-if [ "$num1" == "0" ]; then
-    echo "{\"text\": \" $num2\n ··\n $num3\n $num4\n$num5\"}"
+
+# output vertically
+if [[ " $* " == *" vert "* ]]; then
+    # Output, skipping num1 if it's 0
+    if [ "$num1" == "0" ]; then
+        echo "{\"text\": \" $num2\n ܅\n $num3\n $num4\n$num5\"}"
+    else
+        # using unicode char: 0x0705 for sideways colon
+        echo "{\"text\": \" $num1\n $num2\n ܅\n $num3\n $num4\n$num5\"}"
+    fi
+# output horizontally
 else
-    # using unicode char: 0x0705 for sideways colon
-    echo "{\"text\": \"$num1\n$num2\n܅\n$num3\n$num4\n$num5\"}"
+    if [ "$num1" == "0" ]; then
+        echo "{\"text\": \"$num2:$num3 $num4 $num5\"}"
+    else
+        echo "{\"text\": \"$num1$num2:$num3$num4 $num5\"}"
+    fi
 fi
+

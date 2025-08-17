@@ -214,7 +214,13 @@
         "interval": 1,
     },
     "custom/clock-vert": {
-        "exec": "~/.config/waybar/scripts/clock-vert.sh",
+        "exec": "~/.config/waybar/scripts/clock-simple.sh vert",
+        // "rotate": 90,
+        "interval": 1,
+        "return-type": "json"
+    },
+    "custom/clock-simple": {
+        "exec": "~/.config/waybar/scripts/clock-simple.sh",
         // "rotate": 90,
         "interval": 1,
         "return-type": "json"
