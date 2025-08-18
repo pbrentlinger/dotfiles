@@ -50,7 +50,7 @@ if [[ " $* " == *" vert "* ]]; then
 # output horizontally
 else
     if [ "$num1" == "0" ]; then
-        echo "{\"text\": \"$num2:$num3 $num4 $num5\"}"
+        echo "{\"text\": \"$num2:$num3$num4 $num5\"}"
     else
         echo "{\"text\": \"$num1$num2:$num3$num4 $num5\"}"
     fi
