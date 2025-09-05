@@ -207,24 +207,6 @@
         "interval": 1,
         "on-click-right": "~/.config/waybar/scripts/OCV"
     },
-    "clock#small": {
-        "format": "{:%I:%M %p}",	//12 hour format
-        "format-alt": "{:%H:%M}",	//24 hour format
-        "rotate": 90,
-        "interval": 1,
-    },
-    "custom/clock-vert": {
-        "exec": "~/.config/waybar/scripts/clock-simple.sh vert",
-        // "rotate": 90,
-        "interval": 1,
-        "return-type": "json"
-    },
-    "custom/clock-simple": {
-        "exec": "~/.config/waybar/scripts/clock-simple.sh",
-        // "rotate": 90,
-        "interval": 1,
-        "return-type": "json"
-    },
     "tray": {
         "icon-size": 20,
         "spacing": 5
