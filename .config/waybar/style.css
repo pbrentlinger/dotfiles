@@ -258,6 +258,13 @@ background: rgba(84, 76, 74, 0.9);
     box-shadow: 0 0 8px #874b7e inset;
     animation: purple-shadowPulse 1.5s infinite;
 }
+box.vertical #submap.resize {
+    color: #EAE9E7; 
+    padding: 18px 2px;
+    border-color: #874b7e;
+    box-shadow: 0 0 8px #874b7e inset;
+    animation: purple-shadowPulse 1.5s infinite;
+}
 #network.disabled {
     color:#581818;
 }
