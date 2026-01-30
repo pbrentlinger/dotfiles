@@ -122,7 +122,7 @@ alias lt 'eza -aT --color=always --group-directories-first --icons' # tree listi
 alias l. 'eza -ald --color=always --group-directories-first --icons .*' # show only dotfiles
 
 # Replace some more things with better alternatives
-abbr cat 'bat --style header,snip,changes'
+# abbr cat 'bat --style header,snip,changes'
 if not test -x /usr/bin/yay; and test -x /usr/bin/paru
     alias yay 'paru'
 end
@@ -155,7 +155,7 @@ alias wget 'wget -c '
 alias :q 'exit'
 alias quit 'exit'
 alias cls 'clear'
-
+alias cmatrix 'cmatrix -b -u 7'
 
 # Get fastest mirrors
 alias mirror 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
