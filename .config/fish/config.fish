@@ -156,6 +156,8 @@ alias :q 'exit'
 alias quit 'exit'
 alias cls 'clear'
 alias cmatrix 'cmatrix -b -u 7'
+alias whattime 'date +%I:%M%P'
+alias v 'nvim'
 
 # Get fastest mirrors
 alias mirror 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'

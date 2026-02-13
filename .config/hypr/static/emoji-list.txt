@@ -4003,7 +4003,7 @@
 🌟 : glowing star
 🌠 : shooting star
 🌌 : milky way
-☁️ : cloud
+☁️ : cloud salesforce
 ☁ : cloud
 ⛅ : sun behind cloud
 ⛈️ : cloud with lightning and rain

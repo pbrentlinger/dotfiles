@@ -79,7 +79,7 @@
     // ====== Right modules ===============================================
     // =====================================================================
     "pulseaudio": {
-        "scroll-step": 3, // %, can be a float
+        "scroll-step": 2.5, // %, can be a float
         "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -141,12 +141,13 @@
         "on-click": "~/.config/waybar/scripts/cheatsheet.sh",
     },
     "group/hardware": {
+        "orientation": "inherit",
         "drawer": {
+            "transition-duration": 500,
             "children-class": "hardware",
-            "click-to-reveal": false,
+            // "click-to-reveal": false,
             "transition-left-to-right": false
         },
-        "orientation": "inherit",
         "modules": [
             "temperature",
             "cpu",
@@ -164,8 +165,8 @@
     },
     "cpu": {
         // "format": "🖳 {icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7} {icon8} {icon9} {icon10} {icon11} {icon12} {icon13} {icon14} {icon15} {usage}%",
+        // "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
         "format": "🖳 {usage}%",
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
         "interval": 1,
         "states": {
             "low": 0,
@@ -173,7 +174,7 @@
             "high": 70,
             "critical": 80
         },
-        "on-click": "foot -e htop"
+        "on-click": "foot -e htop --sort-key PERCENT_CPU"
     },
     "memory": {
         "format": "🖴 {percentage}%",
@@ -184,7 +185,7 @@
             "high": 70,
             "critical": 80
         },
-        "on-click": "foot -e htop"
+        "on-click": "foot -e htop --sort-key PERCENT_MEM"
     },
     "upower": {
         "on-click": "upower --dump | yad --text-info"
