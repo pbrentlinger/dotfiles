@@ -155,9 +155,10 @@ alias wget 'wget -c '
 alias :q 'exit'
 alias quit 'exit'
 alias cls 'clear'
-alias cmatrix 'cmatrix -b -u 7'
+alias cmatrix 'cmatrix -b -u 7 -C white'
 alias whattime 'date +%I:%M%P'
 alias v 'nvim'
+alias today 'date "+%B %e, %Y"'
 
 # Get fastest mirrors
 alias mirror 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
