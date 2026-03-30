@@ -199,12 +199,17 @@ binds {
     Ctrl+Shift+R hotkey-overlay-title="Rename Workspace" {
         spawn "dms" "ipc" "call" "workspace-rename" "open";
     }
+    Ctrl+Alt+R hotkey-overlay-title="Unset Workspace name" { 
+        spawn "niri" "msg" "action" "unset-workspace-name" 
+    }
 
     // === Move Workspaces ===
     Mod+Ctrl+Page_Down { move-workspace-down; }
     Mod+Ctrl+Page_Up   { move-workspace-up; }
     Mod+Ctrl+J { move-workspace-down; }
     Mod+Ctrl+K   { move-workspace-up; }
+    Mod+Alt+Ctrl+Home  { move-workspace-to-monitor-left; }
+    Mod+Alt+Ctrl+End  { move-workspace-to-monitor-right; }
     // Mod+Shift+U         { move-workspace-down; }
     // Mod+Shift+I         { move-workspace-up; }
 
