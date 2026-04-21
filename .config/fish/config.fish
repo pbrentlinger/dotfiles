@@ -2,7 +2,7 @@
 # Hide welcome message & ensure we are reporting fish as shell
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
-set -xU MANPAGER "sh -c 'col -bx | bat -l man --style=numbers'"
+set -xU MANPAGER "sh -c 'col -bx | bat -p -l man'"
 set -xU MANROFFOPT "-c"
 set -x SHELL /usr/bin/fish
 
